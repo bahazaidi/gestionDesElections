@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "BureauVote.h"
-/*
+
 int ajouter(char * filename, bv bva)
 {
     FILE * f=fopen(filename, "a");
@@ -95,7 +95,7 @@ int modifier( char * filename, int idbureau, bv nouv )
 
 }
 
-*/
+
 void taux (char *filename ,float *tn,float *te)
 {
     int nb_t=0;

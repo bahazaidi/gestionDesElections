@@ -41,7 +41,7 @@ int main()
       
 
 
- x=modifier("bv.txt",1213,bvb );
+ x=modifier("bv.txt",1213,bvc );
     if(x==1)
        { printf("\n Modification de bureau de vote avec succés");}
     else 
@@ -53,6 +53,8 @@ int main()
           printf("Taux d'observateurs nationaux: %f \n",tn);
           printf("Taux d'observateurs étrangers: %f \n",te);
     
+
+
      vb=TVB( "Liste_electorale.txt");
      printf("Taux de votes blancs: %f \n",vb);
 
