@@ -1146,9 +1146,6 @@ create_modifier_election (void)
   g_signal_connect ((gpointer) button_conf, "clicked",
                     G_CALLBACK (on_button_conf_clicked),
                     NULL);
-  g_signal_connect ((gpointer) anl_mdf, "clicked",
-                    G_CALLBACK (on_anl_mdf_clicked),
-                    NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (modifier_election, modifier_election, "modifier_election");

@@ -17,12 +17,16 @@ main (int argc, char *argv[])
 {
   GtkWidget *signUp;
   GtkWidget *dashboard;
+  GtkWidget *dashboard_modif;
+  GtkWidget *dashboard_affiche;
   GtkWidget *creation_election;
   GtkWidget *nouvelle_election;
   GtkWidget *supprimer_election;
   GtkWidget *modifier_election;
   GtkWidget *Gestion_de_reclamation;
   GtkWidget *Ajouter_reclamation;
+  GtkWidget *identification;
+  GtkWidget *esp_admin;
 
 #ifdef ENABLE_NLS
   bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
@@ -40,22 +44,25 @@ main (int argc, char *argv[])
    * (except popup menus), just so that you see something after building
    * the project. Delete any components that you don't want shown initially.
    */
-  signUp = create_signUp ();
-  gtk_widget_show (signUp);
-  dashboard = create_dashboard ();
+  /* signUp = create_signUp ();
+  gtk_widget_show (signUp);*/
+  identification = create_identification ();
+  gtk_widget_show (identification);
+
+  /*dashboard = create_dashboard();
   gtk_widget_show (dashboard);
   creation_election = create_creation_election ();
   gtk_widget_show (creation_election);
   nouvelle_election = create_nouvelle_election ();
-  gtk_widget_show (nouvelle_election);
-  supprimer_election = create_supprimer_election ();
+  gtk_widget_show (nouvelle_election);*/
+  /*supprimer_election = create_supprimer_election ();
   gtk_widget_show (supprimer_election);
   modifier_election = create_modifier_election ();
   gtk_widget_show (modifier_election);
   Gestion_de_reclamation = create_Gestion_de_reclamation ();
   gtk_widget_show (Gestion_de_reclamation);
   Ajouter_reclamation = create_Ajouter_reclamation ();
-  gtk_widget_show (Ajouter_reclamation);
+  gtk_widget_show (Ajouter_reclamation);*/
 
   gtk_main ();
   return 0;

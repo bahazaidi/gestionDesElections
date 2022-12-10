@@ -100,7 +100,8 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_project2_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
-	interface.$(OBJEXT) callbacks.$(OBJEXT)
+	interface.$(OBJEXT) callbacks.$(OBJEXT) utilisateur.$(OBJEXT) \
+	election.$(OBJEXT)
 project2_OBJECTS = $(am_project2_OBJECTS)
 am__DEPENDENCIES_1 =
 project2_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -160,12 +161,12 @@ ETAGS = etags
 CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/mouhib/Desktop/gestionDesElections1copy/project2/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/mouhib/Desktop/project2/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/mouhib/Desktop/gestionDesElections1copy/project2/missing autoconf
-AUTOHEADER = ${SHELL} /home/mouhib/Desktop/gestionDesElections1copy/project2/missing autoheader
-AUTOMAKE = ${SHELL} /home/mouhib/Desktop/gestionDesElections1copy/project2/missing automake-1.15
+AUTOCONF = ${SHELL} /home/mouhib/Desktop/project2/missing autoconf
+AUTOHEADER = ${SHELL} /home/mouhib/Desktop/project2/missing autoheader
+AUTOMAKE = ${SHELL} /home/mouhib/Desktop/project2/missing automake-1.15
 AWK = mawk
 CATALOGS = 
 CATOBJEXT = .gmo
@@ -200,7 +201,7 @@ LIBOBJS =
 LIBS = 
 LTLIBOBJS = 
 MAINT = 
-MAKEINFO = ${SHELL} /home/mouhib/Desktop/gestionDesElections1copy/project2/missing makeinfo
+MAKEINFO = ${SHELL} /home/mouhib/Desktop/project2/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
@@ -229,10 +230,10 @@ STRIP =
 USE_NLS = yes
 VERSION = 0.1
 XGETTEXT = /usr/bin/xgettext
-abs_builddir = /home/mouhib/Desktop/gestionDesElections1copy/project2/src
-abs_srcdir = /home/mouhib/Desktop/gestionDesElections1copy/project2/src
-abs_top_builddir = /home/mouhib/Desktop/gestionDesElections1copy/project2
-abs_top_srcdir = /home/mouhib/Desktop/gestionDesElections1copy/project2
+abs_builddir = /home/mouhib/Desktop/project2/src
+abs_srcdir = /home/mouhib/Desktop/project2/src
+abs_top_builddir = /home/mouhib/Desktop/project2
+abs_top_srcdir = /home/mouhib/Desktop/project2
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -251,7 +252,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/mouhib/Desktop/gestionDesElections1copy/project2/install-sh
+install_sh = ${SHELL} /home/mouhib/Desktop/project2/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -281,7 +282,9 @@ project2_SOURCES = \
 	main.c \
 	support.c support.h \
 	interface.c interface.h \
-	callbacks.c callbacks.h
+	callbacks.c callbacks.h \
+	utilisateur.c utilisateur.h\
+	election.c election.h
 
 project2_LDADD = -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype $(INTLLIBS)
 all: all-am
@@ -371,9 +374,11 @@ distclean-compile:
 	-rm -f *.tab.c
 
 include ./$(DEPDIR)/callbacks.Po
+include ./$(DEPDIR)/election.Po
 include ./$(DEPDIR)/interface.Po
 include ./$(DEPDIR)/main.Po
 include ./$(DEPDIR)/support.Po
+include ./$(DEPDIR)/utilisateur.Po
 
 .c.o:
 	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
